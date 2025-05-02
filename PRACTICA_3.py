@@ -7,23 +7,23 @@ import plotly.express as px
 # -------------------------
 # CARGA DE DATOS
 # -------------------------
-fact = pd.read_csv("d:/ITESO TAREAS/codigo/Practica_3/FactSale.csv")
-city = pd.read_csv("d:/ITESO TAREAS/codigo/Practica_3/DimCity.csv")
+fact = pd.read_csv("Practica_3/FactSale.csv")
+city = pd.read_csv("Practica_3/DimCity.csv")
 city["City Key"] = city["City Key"].astype(int)
 
-customer = pd.read_csv("d:/ITESO TAREAS/codigo/Practica_3/DimCustomer.csv")
+customer = pd.read_csv("Practica_3/DimCustomer.csv")
 customer.columns = customer.iloc[0]  # usar la fila real del header
 customer = customer.drop(index=0)
 customer = customer.rename(columns=lambda x: str(x).strip())
 customer["Customer Key"] = customer["Customer Key"].astype(int)
 
-date = pd.read_csv("d:/ITESO TAREAS/codigo/Practica_3/DimDate.csv")
+date = pd.read_csv("Practica_3/DimDate.csv")
 date["Date"] = pd.to_datetime(date["Date"])
 
-employee = pd.read_excel("d:/ITESO TAREAS/codigo/Practica_3/DimEmployee.xlsx")
+employee = pd.read_excel("Practica_3/DimEmployee.xlsx")
 employee["Employee Key"] = employee["Employee Key"].astype(int)
 
-stock = pd.read_csv("d:/ITESO TAREAS/codigo/Practica_3/DimStockItem.csv")
+stock = pd.read_csv("Practica_3/DimStockItem.csv")
 stock.columns = stock.iloc[0]  # usar la fila real del header
 stock = stock.drop(index=0)
 stock = stock.rename(columns=lambda x: str(x).strip())
