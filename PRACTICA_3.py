@@ -77,7 +77,7 @@ col1, col2, col3, col4 = st.columns(4)
 col1.metric("Average Profit", f"${kpi1:,.2f}")
 col2.metric("Maximum Profit", f"${kpi2:,.2f}")
 col3.metric("Minimum Profit", f"${kpi3:,.2f}")
-col4.metric("Avgerage Unit Price", f"${kpi4:,.2f}")
+col4.metric("Average Unit Price", f"${kpi4:,.2f}")
 
 # -------------------------
 # GRÁFICAS
